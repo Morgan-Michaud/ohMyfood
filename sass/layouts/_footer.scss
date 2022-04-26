@@ -1,0 +1,21 @@
+footer{
+    position: relative;
+    background-color: $color-footer;
+    padding: 50px 20px 20px 20px;
+        a, i{
+            color: $color-white;
+            margin-right: 8px;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+    
+}
+.footer__logo img{/*modification de la taille du logo, inversion des couleurs*/
+    @include footer-logo;
+    position: absolute;
+    left: -120px;
+    top: 0px;
+    margin-bottom: 30px;
+   
+}

@@ -1,0 +1,20 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99e2D0;
+$color-footer: #000000;
+$color-nav-background: #f8f8f8;
+$color-nav-darker: #e6e6e6;
+$color-white: white;
+$color-shadow: #e7e6e6;
+$color-header-shadow:rgb(201, 201, 201);
+
+$box-shadow: 10px 10px 10px $color-shadow;//toutes les ombres des boutons
+$box-shadow-darker: 10px 10px 10px $color-header-shadow;
+$header-shadow: 0px 8px 5px -5px $color-header-shadow;//la petite ombre sous le header
+$menu-border-radius: 50px 50px 0 0;
+$border: solid 1px black;
+$show-dur: 700ms;//durée de l'apparition des plats
+$show-delay: 300ms;//retard des plats suivants
+$breakpoints: (//une map avec les breakpoints pour faire des mixins media queries
+    desk: 768px
+)

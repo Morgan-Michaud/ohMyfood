@@ -1,0 +1,31 @@
+.loader::before {
+    animation: 1s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 5px $color-white;
+    border-bottom-color: $color-primary;
+    border-radius: 50%;
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+    
+}
+.loader__container{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    animation: loader-fade 1s 3s forwards;
+    @include gradient;
+    p{
+        font-family: 'Shrikhand';
+        font-size: 3em;
+        color: $color-white;
+        margin-left: 22%;
+        margin-top: 110%;
+    }
+} 

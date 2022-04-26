@@ -1,0 +1,220 @@
+.heart{//heart est une balise label
+    position: relative;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    top: 35px;
+    height: 18px;
+    cursor: pointer;
+    input{//input est une balise input type checkbox invisible...
+         border: $border; 
+         visibility: hidden;  
+        &:checked + .fa-solid{
+            animation: heart 150ms 3 both;
+        }
+    }
+    .fa-solid{
+        opacity: 0;
+        transform: scale(2.2);
+        position: absolute;
+        left: 0px;
+        padding-top: 1px;
+        @include gradient;
+        z-index: -1;
+        background-clip: text;//permet de mettre un gradient sur l'icone
+        -webkit-background-clip: text;//permet de mettre un gradient sur l'icone
+        color: transparent;//permet de mettre un gradient sur l'icone
+    }      
+}
+.btn-pink{
+    
+    margin: 70px auto;
+    //border: $border;
+    text-align: center;
+    
+    .commander a::before, .commander a::after{//pour élargir le bouton commander des pages menu mais ça marche pas
+        content: "    ";
+        }
+    a{
+    border-radius: 100rem;//permet d'avoir un arrondi sur toute la hauteur
+    @include gradient;
+    white-space: nowrap;
+    box-shadow: $box-shadow;
+    padding: 20px;
+    color: $color-white;
+    font-size: 20px;
+    transition: 300ms;
+    &:hover{
+        opacity: .5;
+        box-shadow: $box-shadow-darker
+        //@include hover-gradient; //éclaircir le bouton mais opacity c'est plus simple...
+        //opacity: .5;
+        //box-shadow: $box-shadow-darker;
+        }
+    }
+   
+}
+.guide{
+    &__step{
+         a{
+        @include btn;
+        height: 100px;
+        @include desktop{
+            height: 83px;
+        }
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        background-color: $color-nav-background;
+        margin-bottom: 20px;
+        }
+    &__text{
+        padding: 2% 15%;
+        font-size: 14px;
+        }
+    &__number{//pastille des étapes + numéro d'étape
+        color: $color-white;
+        font-size: 15px;
+        text-align: center;
+        padding-top: 5px;
+        min-width: 26px;
+        height: 22px;
+        border-radius: 22px;//permet d'avoir un arrondi sur toute la hauteur
+        position: relative;
+        left: -12px;
+        background-color: $color-primary;
+        }
+        
+    &__icon{//icones du tutoriel replacées et agrandies
+        position: relative;
+        left: 30px;
+        i{
+             transform: scale(1.5)
+        }
+        }
+    }  
+}
+.card{//card établissement
+    @include btn;
+    height: 330px;
+    background: $color-white;
+    overflow: hidden;
+    position: relative;
+    @include desktop{
+        width: 400px;
+    }
+    &__img{
+        height: 100%;
+        img{//photo
+            width: 100%;
+            position: absolute;
+            bottom: 90px;
+        }
+    }
+    &__body{//texte et coeur
+            position: absolute;
+            background-color: $color-white;
+            width: 100%;
+            display: flex;
+            bottom: 0;
+            height: 22%;
+            
+            &__txt{//texte
+                flex: 6;
+                padding-left: 15px;
+                p, h3{
+                    font-size: 22px;
+                    margin: auto;//interligne
+                }
+            }
+            &__heart{
+                flex: 1;
+                i{
+                top: -25%;
+                //border: $border;
+                }
+                
+            }
+        }
+}
+
+.btn{//bouton  de commande d'un plat
+    @include btn;
+    @include dish-anim;
+    position: relative;
+    height: 90px;
+    display: flex;
+    overflow: hidden;//pour masquer le slider
+    /*&:hover &__fixed-info{//réduction de l'info inerte pour faire apparaître les points ellipsis. A revoir pour que ce soit progressif
+        width: 270px;
+    }*/    
+    &:hover > .slider{//au survol de btn comportement du slider
+        transform: translateX(186%);
+        .circle{//comportement de circle (cercle blanc).
+            transform: rotate(1turn);
+            transition-duration: 500ms;/*pour avoir la rotation uniquement dans un sens*/
+        }
+        p{//le tarif se déplace légèrement dans la div slider.
+            transform: translateX(30px);
+        }
+    }
+    &__fixed-info{//partie inerte du btn
+        position: absolute;
+        height: 90px;
+        margin-left: 0;
+        padding-top: 0px;
+        padding-left: 10px;
+        //border: $border;
+        h3{
+            font-size: 22px;
+            max-width: 100%;
+            white-space: nowrap;
+            
+        }
+        p{
+            font-size: 20px;
+            margin-top: -16px;
+            white-space: nowrap;
+        }
+    }
+    .slider{//tiroir
+        width: 35%;
+        display: flex;
+        background-color: $color-white;
+        transform: translateX(250%);
+        transition: 500ms;//placé ici la translation est douce dans les deux sens.
+        
+        p{//tarif du plat
+            flex: 1;
+            font-size: 20px;
+            margin-right: 20px;
+            padding-top: 35px;
+            transition: 1000ms, 500ms;//placé ici la translation est douce dans les deux sens. le deuxième nombre est un retard?
+        }
+        
+        &__check{//forme verte qui se révèle au survol.
+            flex: 1.5;
+            background-color: $color-tertiary;
+            .circle{//cercle blanc qui contient la border rotative
+                position: relative;
+                margin: 30px auto ;
+                width: 30px;
+                height: 30px;
+                border-radius: 100rem;
+                background-color: $color-white;
+                
+                .rotborder{//le signe check est une border right et bottom
+                    @include rotborder;
+                    position: absolute;
+                    left: 9px;
+                    top: 5px;
+                    
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+    

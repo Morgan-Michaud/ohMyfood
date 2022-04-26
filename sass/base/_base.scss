@@ -1,0 +1,27 @@
+body{
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;//...pour positionner un loader...
+}
+i{
+    position: relative;
+    top: 30%;
+    transform: scale(1);//sinon c'est chaotique...
+}
+.fa-arrow-left{//dimensionnement de ces deux icones sur le site.
+    transform: scale(1.7);
+}
+.fa-heart{
+    transform: scale(2.5);
+}
+.main__menu{
+    display: flex;//sinon le header disparait en desktop. La le footer disparait...
+    
+}
+.main__index{
+    @include desktop{
+        display: flex;//pour afficher section et nav en ligne
+        
+    }
+}

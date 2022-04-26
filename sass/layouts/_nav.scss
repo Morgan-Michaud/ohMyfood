@@ -1,0 +1,25 @@
+nav{//titre et 4 cards d'établissement
+    background: $color-nav-background;
+    padding: 60px 0;
+        h2{
+            padding-left: 5%;
+            
+        }
+    @include desktop{
+        flex: 2;//largeur de nav en desk
+        padding: 0;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
+}
+.new::after{
+    content: "Nouveau";
+    @include nouveau;
+}
+
+/*#la_note_enchantee .card__img img{}//la photo n'est pas en paysage comme les autres*/
+    
+    

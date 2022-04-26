@@ -1,0 +1,35 @@
+.tuto{
+    @include desktop{
+        flex: 1;//largeur du tuto en desk
+        height: auto;
+    }
+}
+.local{
+    background-color: $color-nav-background;
+        &__header{
+            background-color: $color-nav-darker;
+            display: flex;
+            justify-content: center;
+            height: 60px;
+        }
+        &__explore{
+            padding: 6%;
+            
+                h1, p{
+                    text-align: center;
+                    margin-bottom: -10px;
+                    //border: $border;
+                    @include desktop{
+                        font-size: 1.2em;
+                    }
+                }
+            
+            
+        }
+   
+}
+
+.guide{
+    padding: 8% 0;
+    padding-bottom: 70px;
+}

@@ -1,0 +1,69 @@
+@mixin footer-logo {
+    transform: scale(0.3);
+    filter: invert(180);
+}
+@mixin btn {//largeur, centrage et ombres des boutons et cards
+    width: 90%;
+    margin: 25px auto;
+    border-radius: 15px;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    cursor: pointer;//la flêche de la souris se change en main
+    
+}
+@mixin gradient{//fond des boutons principaux
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    
+}
+@mixin hover-gradient{//inutilisée
+    color: linear-gradient(to bottom right, lighten-10($color-secondary), lighten-10($color-primary));
+}
+@mixin nouveau{//label vert "nouveau"
+    display: initial;//le mot "nouveau" est présent en html mais hidden
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 40);
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 1;
+    padding: 8px 14px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 2px;
+}
+@mixin icon-scale {//pour les icones heart et la flêche du header
+    transform: scale(2);
+}
+@mixin rotborder{//signe vert de validation sur un plat
+    height: 14px;
+    width: 8px;
+    border-bottom: 4px solid $color-tertiary;
+    border-right: 4px solid $color-tertiary;
+    transform: rotate(40deg);
+}
+@mixin dish-anim{//animation des plats au chargement de la page. Peut aussi être utilisée pour les <div> entrées plats desserts...
+    animation: dish-load $show-dur;
+    animation-fill-mode: backwards;//sinon les plats apparaissent, puis s'animent.
+    /*&--1{
+        animation-delay: $show-delay;
+    }
+    &--2{//plat suivant
+        animation-delay: $show-delay * 2;
+    }
+    &--3{//plat suivant
+        animation-delay: $show-delay * 3;
+    }
+    &--4{//plat suivant
+        animation-delay: $show-delay * 4;
+    }*/
+    @for $i from 1 to 4 {//plus simple à écrire mais il faut toujours iterer les classes en HTML...
+        &--#{$i}{
+            animation-delay: $show-delay * $i;
+        }
+    }
+}
+@mixin desktop{//media query pour ordinateurs 
+    @media screen and (min-width: map-get($breakpoints, desk)) {
+        @content
+    }
+}
