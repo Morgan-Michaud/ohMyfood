@@ -1,5 +1,4 @@
 footer{
-    position: relative;
     background-color: $color-footer;
     padding: 50px 20px 20px 20px;
         a, i{
@@ -11,11 +10,26 @@ footer{
         }
     
 }
-.footer__logo img{/*modification de la taille du logo, inversion des couleurs*/
-    @include footer-logo;
-    position: absolute;
-    left: -120px;
-    top: 0px;
-    margin-bottom: 30px;
-   
+
+/*modification de la taille du logo, inversion des couleurs*/
+
+.footer{
+    &__container{
+    position: relative;
+    /*@include desktop{
+        width: 1400px;
+        margin: auto;
+    }*/
+}
+    &__logo{
+        position: absolute;
+        left: -140px;
+        top: -60px;
+        margin-bottom: 30px;
+        //border: white solid 2px;
+        img{
+            @include footer-logo;
+        }
+}
+
 }

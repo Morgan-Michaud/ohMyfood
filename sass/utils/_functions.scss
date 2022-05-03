@@ -1,44 +1,10 @@
-@keyframes dish-load{//animation des plats au chargement dans les pages menu
-    0%{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-@function lighten-10($color){//éclaircir de 10%
+//éclaircir de 10%
+@function lighten-10($color){
     @return lighten($color, 10);
 }
-@function darken-10($color){//assombrir de 10%
+
+//assombrir de 10%
+@function darken-10($color){
     @return darken($color, 10);
-}
-@keyframes spinner {//test du loader
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-}
-@keyframes loader-fade{//disparition du loader
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-        transform: scaleY(0%);
-    }
-}
-@keyframes heart{//animation des plats au chargement dans les pages menu
-    from{
-        transform: rotateY(0);
-        opacity: 0;
-    }
-    to{
-        transform: rotateY(3);
-        opacity: 1;
-    }
 }

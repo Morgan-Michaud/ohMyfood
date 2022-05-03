@@ -1,7 +1,7 @@
 h1{
     font-size: 30px;
 }
-h1, h2, h3, p, div, a{/*ça marche pas*/
+h1, h2, h3, p, div, a{
     font-family: 'roboto', sans-serif;
 }
 
@@ -9,9 +9,12 @@ a{/*tous les liens sont en noir et pas soulignés*/
     text-decoration: none;
     color: black;
 }
+
 ul{/*pas de puces sur les listes*/
     list-style-type: none;
-    padding-left: 0;/*elimine le retrait des listes*/
+
+    /*elimine le retrait des listes*/
+    padding-left: 0;
 }
 .uppercase{
     text-transform: uppercase;

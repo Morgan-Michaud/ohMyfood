@@ -1,4 +1,7 @@
-nav{//titre et 4 cards d'établissement
+//--
+//titre et 4 cards d'établissement
+//--
+nav{
     background: $color-nav-background;
     padding: 60px 0;
         h2{
@@ -6,11 +9,19 @@ nav{//titre et 4 cards d'établissement
             
         }
     @include desktop{
-        flex: 2;//largeur de nav en desk
+
+        //largeur de nav en desk
+        flex: 2;
         padding: 0;
         ul{
             display: flex;
             flex-wrap: wrap;
+
+            //conserver des marges sur les côtés quand les cards sont cote à cote.
+            margin: 3%;
+
+            //cette propriété indique l'écart qu'on veut entre les éléménts!
+            gap: 3%;
         }
         
     }
@@ -20,6 +31,7 @@ nav{//titre et 4 cards d'établissement
     @include nouveau;
 }
 
-/*#la_note_enchantee .card__img img{}//la photo n'est pas en paysage comme les autres*/
+
+
     
     

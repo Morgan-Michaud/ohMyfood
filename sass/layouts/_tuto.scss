@@ -1,6 +1,8 @@
 .tuto{
     @include desktop{
-        flex: 1;//largeur du tuto en desk
+
+        //largeur du tuto en desk
+        width: 500px;
         height: auto;
     }
 }
@@ -32,4 +34,7 @@
 .guide{
     padding: 8% 0;
     padding-bottom: 70px;
+    h2{
+        padding-left: 5%;
+    }
 }

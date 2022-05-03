@@ -1,4 +1,15 @@
-.loader::before {
+.loader{
+    font-family: 'Shrikhand';
+    font-size: 3em;
+    color: $color-white;
+    text-align: center;
+    padding-top: 80%;
+    @include desktop{
+
+        //c'est un compromis...
+        padding-top: 600px;
+    }
+    &::before {
     animation: 1s linear infinite spinner;
     animation-play-state: inherit;
     border: solid 5px $color-white;
@@ -8,24 +19,25 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 15%;
     left: 50%;
+    bottom: 400px;
     transform: translate3d(-50%, -50%, 0);
     will-change: transform;
-    
+    @include desktop{
+        top: 50%;
+        width: 200px;
+        height: 200px;
+        
+    }
+} 
 }
 .loader__container{
-    position: absolute;
-    z-index: 2;
+    position: fixed;
+    z-index: 998;
     height: 100%;
     width: 100%;
-    animation: loader-fade 1s 3s forwards;
+    transform-origin: 0% 0%;
+    animation: loader-fade-out 1s 2s forwards;
     @include gradient;
-    p{
-        font-family: 'Shrikhand';
-        font-size: 3em;
-        color: $color-white;
-        margin-left: 22%;
-        margin-top: 110%;
-    }
+    
 } 

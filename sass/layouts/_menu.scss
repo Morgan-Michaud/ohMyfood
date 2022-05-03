@@ -1,17 +1,27 @@
 .menu{
     width: 100%;
     &__img{
-        background: url("../../public/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat center;//photo resizée en mobile
+
+        //photo resizée en mobile
+        background: url("../../public/images/toa-heftiba-DQKerTsQwi0-unsplash1500.jpg") no-repeat center;
         background-size: 100%;
-        height: 310px;//c'est le maximum pour la taille de resize des photos
-        margin-bottom: -28px;//coller le container de l'img au menu_content
+
+        //c'est le maximum pour la taille de resize des photos
+        height: 310px;
+
+        //coller le container de l'img au menu_content
+        margin-bottom: -28px;
         @include desktop{
-            background: url("../../public/images/toa-heftiba-DQKerTsQwi0-unsplash-big.jpg") no-repeat center;//grosse image en desktop
+
+            //grosse image en desktop
+            background: url("../../public/images/toa-heftiba-DQKerTsQwi0-unsplash-big.jpg") no-repeat center;
             background-size: cover;
-            height: 40%;
+            
         }
         /*img{
-            width: 100%;//ne sert à rien car l'img est pour l'instant hidden
+
+            //ne sert à rien car l'img est pour l'instant hidden
+            width: 100%;
         }*/
     
     }
@@ -35,10 +45,12 @@
             display: flex;
             margin: auto 20px;
             padding-top: 10px;
-            
+            align-items: center;
             h1{
                 font-family: 'Shrikhand';
-                width: 90%;//repousser le coeur rose
+
+                //repousser le coeur rose
+                width: 90%;
                 
             }
         }

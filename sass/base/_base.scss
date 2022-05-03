@@ -1,27 +1,45 @@
 body{
     box-sizing: border-box;
-    max-width: 1400px;
     margin: auto;
-    position: relative;//...pour positionner un loader...
+
+    //...pour positionner un loader...
+    position: relative;
+    
+    //masquer le body au chargement: attention on ne voit plus le chargement des plats sur la page menu...
+    //transform: scaleY(0);
+    //animation: body-fade-in 0s 3s forwards;
+}
+.main__index__container{
+    @include desktop{
+
+        //pour afficher section tuto et nav en ligne
+        display: flex;
+        
+    }
+}
+.main, .footer, .header{
+    &__container{
+        max-width: 1400px;
+        margin: auto;
+    }
 }
 i{
     position: relative;
     top: 30%;
-    transform: scale(1);//sinon c'est chaotique...
+
+    //sinon c'est chaotique...
+    transform: scale(1);
 }
-.fa-arrow-left{//dimensionnement de ces deux icones sur le site.
-    transform: scale(1.7);
+
+//dimensionnement de ces deux icones sur le site.
+.fa-arrow-left{
+    transform: scale(2);
 }
 .fa-heart{
     transform: scale(2.5);
 }
-.main__menu{
-    display: flex;//sinon le header disparait en desktop. La le footer disparait...
-    
-}
-.main__index{
-    @include desktop{
-        display: flex;//pour afficher section et nav en ligne
-        
-    }
-}
+
+
+
+
+

@@ -2,24 +2,36 @@
     transform: scale(0.3);
     filter: invert(180);
 }
-@mixin btn {//largeur, centrage et ombres des boutons et cards
+
+//largeur, centrage et ombres des boutons et cards
+@mixin btn {
     width: 90%;
     margin: 25px auto;
     border-radius: 15px;
     background-color: $color-white;
     box-shadow: $box-shadow;
-    cursor: pointer;//la flêche de la souris se change en main
+
+    //la flêche de la souris se change en main
+    cursor: pointer;
     
 }
-@mixin gradient{//fond des boutons principaux
+
+//fond des boutons principaux et coeur
+@mixin gradient{
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
     
 }
-@mixin hover-gradient{//inutilisée
+
+//inutilisée: version plus claire du gradient
+@mixin hover-gradient{
     color: linear-gradient(to bottom right, lighten-10($color-secondary), lighten-10($color-primary));
 }
-@mixin nouveau{//label vert "nouveau"
-    display: initial;//le mot "nouveau" est présent en html mais hidden
+
+//label vert "nouveau"
+@mixin nouveau{
+
+    //le mot "nouveau" est présent en html mais hidden
+    display: initial;
     background-color: $color-tertiary;
     color: darken($color-tertiary, 40);
     position: absolute;
@@ -31,19 +43,27 @@
     font-weight: bold;
     border-radius: 2px;
 }
-@mixin icon-scale {//pour les icones heart et la flêche du header
+
+//pour les icones heart et la flêche du header
+@mixin icon-scale {
     transform: scale(2);
 }
-@mixin rotborder{//signe vert de validation sur un plat
+
+//signe vert de validation sur un plat
+@mixin rotborder{
     height: 14px;
     width: 8px;
     border-bottom: 4px solid $color-tertiary;
     border-right: 4px solid $color-tertiary;
     transform: rotate(40deg);
 }
-@mixin dish-anim{//animation des plats au chargement de la page. Peut aussi être utilisée pour les <div> entrées plats desserts...
+
+//animation des plats au chargement de la page. Peut aussi être utilisée pour les <div> entrées plats desserts...
+@mixin dish-anim{
     animation: dish-load $show-dur;
-    animation-fill-mode: backwards;//sinon les plats apparaissent, puis s'animent.
+
+    //sinon les plats apparaissent, puis s'animent.
+    animation-fill-mode: backwards;
     /*&--1{
         animation-delay: $show-delay;
     }
@@ -56,13 +76,17 @@
     &--4{//plat suivant
         animation-delay: $show-delay * 4;
     }*/
-    @for $i from 1 to 4 {//plus simple à écrire mais il faut toujours iterer les classes en HTML...
+
+    //plus simple à écrire mais il faut toujours iterer les classes en HTML...
+    @for $i from 1 to 4 {
         &--#{$i}{
             animation-delay: $show-delay * $i;
         }
     }
 }
-@mixin desktop{//media query pour ordinateurs 
+
+//media query pour ordinateurs
+@mixin desktop{ 
     @media screen and (min-width: map-get($breakpoints, desk)) {
         @content
     }

@@ -1,20 +1,40 @@
-header {
+.header{
+    &__container{
     height: 70px;
-    display: flex;
-    position: relative;
     box-shadow: $header-shadow;
-    background: url("../../public/images/ohmyfood@2x.svg") no-repeat center;//le logo est une background image, trop galère avec l'import en html...
-    background-size: 40%;//ne fonctionne pas dans background...
+
+    //permet de faire apparaître la box-shadow
+    position: relative;
+
+    //le logo est une background image, trop galère avec l'import en html...
+    background: url("../../public/images/ohmyfood@2x.svg") no-repeat center;
+    //border: $border;
+    
+    //ne fonctionne pas dans la propriété background...
+    background-size: 40%;
     @include desktop{
         height: 100px;
     }
-    /*img{//pour l'emploi 'une img en html...pas le cas pour le moment
-        position: absolute;
-        left: 32%;
-        margin: 3% auto;
-        //border: $border;
-    }*/
-    i{//icone flêche
-        margin-left: 30px;
+    
     }
+    //icone flêche
+    &__fleche {
+        margin-left: 30px;
+        width: 100px;
+        height: 100px;
+        border: $border;
+        a{
+            border: $border;
+            width: 80px;
+            height: 80px;
+
+        }
+    }
+    &__fa-arrow-left{
+        width: 80px;
+        height: 80px;
+        color: black;
+    }
+    
 }
+
