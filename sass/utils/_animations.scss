@@ -11,7 +11,7 @@
     }
 }
 
-//test du loader
+//loader
 @keyframes spinner {
     0% {
       transform: translate3d(-50%, -50%, 0) rotate(0deg);
@@ -32,7 +32,7 @@
     }
 }
 
-//apparition du body
+//apparition du body (inutilisé)
 @keyframes body-fade-in{
     from{
         transform: scaleY(0%);

@@ -55,10 +55,13 @@
             }
         }
     &__dishes{
+
+        //en desktop comportement des <div> entrées plats desserts.
         @include desktop{
             display: flex;
+            flex-wrap: wrap;
             .entrees, .plats, .desserts{
-                flex: 1;
+                min-width: 466px;
             }
         }
     }    

@@ -11,8 +11,19 @@
         &__header{
             background-color: $color-nav-darker;
             display: flex;
-            justify-content: center;
-            height: 60px;
+            height: 70px;
+            
+            //nom du quartier, de la ville et location-dot
+            p{
+               flex: 2;
+               
+            }
+            i{
+                flex: 1;
+                left: 35%;
+                top: 60%;
+                transform: scale(1.5);
+            }
         }
         &__explore{
             padding: 6%;

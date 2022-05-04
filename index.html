@@ -13,7 +13,7 @@
 <body>
 
     <!--page de chargement hidden pour travailler-->
-     <div class="loader__container">
+     <div class="loader__container" hidden>
         
         <!--ici un spinner-->
         <div class="loader">Ohmyfood</div>
@@ -22,15 +22,12 @@
         <!--logo et fleche-->
         <header>
             <div class="header__container">
-                <div class="header__fleche">
-                    <a href="index.html">
-                        <i class="header__fa-solid header__fa-arrow-left"></i>
-                    </a>
-                </div>
-                <!--essayer de mettre le logo en background img sur css-->
+                
+                <!--logo en background img sur css-->
                 <h1 hidden>ohmyfood</h1>
             </div>
         </header>
+
         <!--différencier ce main du main menu car il est flex en desktop-->
         <main class="main__index">
             <div class="main__container main__index__container">
@@ -39,7 +36,7 @@
                     <!--localisation de l'utilisateur-->
                     <article class="local">
                         <div class="local__header">
-                            <div><i class="fa-solid fa-location-dot"></i></div>
+                            <i class="fa-solid fa-location-dot"></i>
                             <p>Paris, Belleville</p>
                         </div>
                         <div class="local__explore">
