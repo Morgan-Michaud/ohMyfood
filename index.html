@@ -14,18 +14,23 @@
 </head>
 
 <body>
+    <div class="loader">
 
-    <!--page de chargement hidden pour travailler-->
-    <div class="loader__container">
+        <!--page de chargement. mettre en hidden pour travailler-->
+        <div class="loader__container">
 
-        <!--ici un spinner-->
-        <div class="loader">Ohmyfood</div>
+            <!--ici un spinner-->
+            <div class="loader__logo">Ohmyfood</div>
+        </div>
+    
     </div>
-
+    
     <!--logo et fleche-->
     <header>
         <div class="header__container">
-
+            <div class="logo">
+                <img src="../../public/images/ohmyfood@2x.svg">
+            </div>
             <!--logo en background img sur css-->
             <h1 hidden>ohmyfood</h1>
         </div>
@@ -33,7 +38,9 @@
 
     <!--différencier ce main du main menu car il est flex en desktop-->
     <main class="main__index">
+
         <div class="main__container main__index__container">
+
             <section class="tuto">
 
                 <!--localisation de l'utilisateur-->
@@ -47,11 +54,12 @@
                         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
                         <!--bouton rose pour rechercher (accueil) ou commander (menus)-->
-                        <div class="btn-pink Explorer">
-                            <a href="#">Explorer nos Restaurants</a>
+                        <div class="btn-pink">
+                            <a href="#" class="explorer">Explorer nos Restaurants</a>
                         </div>
                     </div>
                 </article>
+
                 <article class="guide">
                     <h2>Fonctionnement</h2>
                     <div class="guide__step">
@@ -113,7 +121,12 @@
                                     <p>Ménilmontant</p>
                                 </div>
                                 <div class="card__body__heart">
-
+                                    <!--permet apparemment de commander la checkbox-->
+                                    <label for="toggle--1" class="heart trigger--1">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <input id="toggle--1" type="checkbox">
+                                        <i class="fa-solid fa-heart fa-solid--1"></i>
+                                    </label>
                                 </div>
                             </div>
                         </a>
@@ -132,8 +145,12 @@
                                     <p>Charonne</p>
                                 </div>
                                 <div class="card__body__heart">
-
-
+                                    <!--permet apparemment de commander la checkbox-->
+                                    <label for="toggle--2" class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <input id="toggle--2" type="checkbox" class="trigger--2">
+                                        <i class="fa-solid fa-heart fa-solid--2"></i>
+                                    </label>
                                 </div>
                             </div>
 
@@ -152,10 +169,10 @@
                                 <div class="card__body__heart">
 
                                     <!--permet apparemment de commander la checkbox-->
-                                    <label for="toggle" class="heart">
+                                    <label for="toggle--3" class="heart trigger--3">
                                         <i class="fa-regular fa-heart"></i>
-                                        <input id="toggle" type="checkbox">
-                                        <i class="fa-solid fa-heart"></i>
+                                        <input id="toggle--3" type="checkbox">
+                                        <i class="fa-solid fa-heart fa-solid--3"></i>
                                     </label>
                                 </div>
                             </div>
@@ -173,8 +190,12 @@
                                     <p>Folie-Méricourt</p>
                                 </div>
                                 <div class="card__body__heart">
-
-
+                                    <!--permet apparemment de commander la checkbox-->
+                                    <label for="toggle--4" class="heart trigger--4">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <input id="toggle--4" type="checkbox">
+                                        <i class="fa-solid fa-heart fa-solid--4"></i>
+                                    </label>
                                 </div>
                             </div>
 
@@ -182,8 +203,10 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
     </main>
+
     <footer>
         <div class="footer__container">
             <div class="footer__logo">

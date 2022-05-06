@@ -1,35 +1,36 @@
 footer{
     background-color: $color-footer;
-    padding: 50px 20px 20px 20px;
-        a, i{
+        a{
             color: $color-white;
-            margin-right: 8px;
+        }
+        i{
+            color: $color-white;
+            width: 20px;
+            text-align: center;
         }
         li{
             margin-bottom: 10px;
+            //border: 1px solid white;
         }
-    
-}
-
-/*modification de la taille du logo, inversion des couleurs*/
-
-.footer{
-    &__container{
-    position: relative;
-    /*@include desktop{
-        width: 1400px;
-        margin: auto;
-    }*/
-}
-    &__logo{
-        position: absolute;
-        left: -140px;
-        top: -60px;
-        margin-bottom: 30px;
-        //border: white solid 2px;
         img{
             @include footer-logo;
         }
 }
+.footer{
+    &__container{
+        height: auto;
+        position: relative;
+        padding: 50px 20px 20px 20px;
+    }
+    &__logo{
+        height: 40px;
+        position: absolute;
+        top: 0;
 
+        //padding left 0 ne marche pas
+        left: -24%;
+        
+        /*modification de la taille du logo, inversion des couleurs*/
+        
+    }
 }

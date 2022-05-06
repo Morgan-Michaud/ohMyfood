@@ -26,5 +26,5 @@ $show-delay: 300ms;
 
 //une map avec les breakpoints pour faire des mixins media queries
 $breakpoints: (
-    desk: 768px
+    medium: 768px, large: 1250px
 )

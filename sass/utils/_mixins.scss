@@ -60,10 +60,8 @@
 
 //animation des plats au chargement de la page. Peut aussi être utilisée pour les <div> entrées plats desserts...
 @mixin dish-anim{
-    animation: dish-load $show-dur;
+    animation: dish-load $show-dur backwards;
 
-    //sinon les plats apparaissent, puis s'animent.
-    animation-fill-mode: backwards;
     /*&--1{
         animation-delay: $show-delay;
     }
@@ -84,10 +82,23 @@
         }
     }
 }
-
+//animation des hearts de l'index pour que le coeur CORRESPONDANT se remplisse
+@mixin heart-anim {
+    @for $i from 1 to 4 {
+        &--#{$i}{
+            animation: heart 150ms 3 both;
+        }
+    }
+    
+}
 //media query pour ordinateurs
 @mixin desktop{ 
-    @media screen and (min-width: map-get($breakpoints, desk)) {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+        @content
+    }
+}
+@mixin large {
+    @media screen and (min-width: map-get($breakpoints, large)) {
         @content
     }
 }

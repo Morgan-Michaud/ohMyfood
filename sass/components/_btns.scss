@@ -11,12 +11,12 @@
     cursor: pointer;
     //border: $border;
 
-    //input est une balise input type checkbox invisible...
+    //balise input type checkbox invisible...
     input{
         visibility: hidden;
-         
         &:checked + .fa-solid{
             animation: heart 150ms 3 both;
+            
         }
     }
 
@@ -48,9 +48,10 @@
     //border: $border;
     text-align: center;
     
-    //pour élargir le bouton commander des pages menu mais ça marche pas
-    .commander a::before, .commander a::after{
-        content: "    ";
+    //pour élargir le bouton commander des pages menu
+    .commander {
+        padding-left: 55px;
+        padding-right: 55px;
         }
     a{
 
@@ -83,6 +84,7 @@
          a{
         @include btn;
         height: 100px;
+        transition: all 300ms;
         @include desktop{
             height: 83px;
         }
@@ -138,9 +140,8 @@
     height: 330px;
     overflow: hidden;
     position: relative;
-    @include desktop{
+    @include large{
         width: 380px;
-        
     }
     &__img{
         height: 100%;
@@ -148,6 +149,11 @@
             width: 100%;
             position: absolute;
             bottom: 90px;
+            @include desktop{
+                height: 100%;
+                object-fit: cover;
+            }
+           
         }
     }
 
@@ -158,7 +164,6 @@
         display: flex;
         bottom: 0;
         height: 22%;
-            
         &__txt{
             flex: 6;
             padding-left: 15px;
@@ -175,8 +180,7 @@
             position: absolute;
             top: 20px;
         }
-            
-        }
+    }
 }
 
 //--
@@ -188,7 +192,7 @@
     position: relative;
     height: 90px;
     display: flex;
-
+    
     //pour masquer le slider
     overflow: hidden;
     /*&:hover &__fixed-info{//réduction de l'info inerte pour faire apparaître les points ellipsis. A revoir pour que ce soit progressif
@@ -300,5 +304,77 @@
         
     }
 }
+.test{
+    @include btn;
+    overflow: hidden;
+    &__large{
+        height: 90px;
+        width: 120%;
+        display: flex;
+        //border: $border;
+        &:hover > .info{
 
+            //54% est une bonne valeur
+            width: 54%;
+            .circle{
+                transform: rotate(1turn);
+    
+                /*pour avoir la rotation uniquement dans un sens*/
+                transition-duration: 500ms;
+            }
+        }
+        .info{
+            width: 80%;
+            //border: $border;
+            white-space: nowrap;
+            transition: all 500ms;
+            padding-left: 10px;
+            
+            p{
+                margin-top: -15px;
+                font-size: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            h3{
+                
+                font-size: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+            }
+        }
+        .price{
+            width: 10%;
+            background-color: $color-white;
+            padding-left: 0%;
+            padding-top: 55px;
+            font-size: 20px;
+            //border: $border;
+        }
+        .slider{
+            //border: $border;
+            width: 18%;
+            background-color: $color-tertiary;
+            .circle{
+                position: relative;
+                margin: 30px auto ;
+                width: 30px;
+                height: 30px;
+                border-radius: 100rem;
+                background-color: $color-white;
+                
+                //le signe check est une border right et bottom
+                .rotborder{
+                    @include rotborder;
+                    position: absolute;
+                    left: 9px;
+                    top: 5px;
+                    
+                    
+                }
+            }
+        }
+    }
+}
     
