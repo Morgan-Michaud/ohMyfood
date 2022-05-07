@@ -195,10 +195,7 @@
     
     //pour masquer le slider
     overflow: hidden;
-    /*&:hover &__fixed-info{//réduction de l'info inerte pour faire apparaître les points ellipsis. A revoir pour que ce soit progressif
-        width: 270px;
-    }*/  
-    
+       
     //au survol de btn comportement du slider
     &:hover > .slider{
         transform: translateX(186%);
@@ -315,19 +312,25 @@
         &:hover > .info{
 
             //54% est une bonne valeur
-            width: 54%;
-            .circle{
-                transform: rotate(1turn);
-    
-                /*pour avoir la rotation uniquement dans un sens*/
-                transition-duration: 500ms;
+            width: 52%;
+            
+        }
+        &:hover > .price p{
+            transform: translateX(20%);
+        }
+        &:hover > .checkslide{
+            .checkcircle{
+            
+            //rotation du cercle blanc
+            animation: oneturn 600ms;
             }
+        
         }
         .info{
-            width: 80%;
+            width: 77%;
             //border: $border;
             white-space: nowrap;
-            transition: all 500ms;
+            transition: all 600ms;
             padding-left: 10px;
             
             p{
@@ -347,25 +350,31 @@
         .price{
             width: 10%;
             background-color: $color-white;
-            padding-left: 0%;
-            padding-top: 55px;
+            padding-left: 2%;
+            padding-top: 35px;
+            p{
             font-size: 20px;
+            transition: all 600ms;
             //border: $border;
+            }
         }
-        .slider{
+        .checkslide{
             //border: $border;
             width: 18%;
             background-color: $color-tertiary;
-            .circle{
+            
+            
+            .checkcircle{
                 position: relative;
                 margin: 30px auto ;
                 width: 30px;
                 height: 30px;
                 border-radius: 100rem;
                 background-color: $color-white;
+                transform: rotate(0turn);
                 
                 //le signe check est une border right et bottom
-                .rotborder{
+                .check{
                     @include rotborder;
                     position: absolute;
                     left: 9px;

@@ -16,12 +16,6 @@
             top: 35%;
         }
     }
-    //le logo est une background image, trop galère avec l'import en html...
-    //background: url("../../public/images/ohmyfood@2x.svg") no-repeat center;
-    //border: $border;
-    
-    //ne fonctionne pas dans la propriété background...
-    background-size: 40%;
     @include desktop{
         height: 100px;
     }

@@ -7,7 +7,7 @@
         background-size: 100%;
 
         //c'est le maximum pour la taille de resize des photos
-        height: 310px;
+        height: 280px;
 
         //coller le container de l'img au menu_content
         margin-bottom: -28px;
@@ -62,6 +62,7 @@
             flex-wrap: wrap;
             .entrees, .plats, .desserts{
                 min-width: 466px;
+                margin: auto;
             }
         }
     }    

@@ -12,13 +12,16 @@ footer{
             margin-bottom: 10px;
             //border: 1px solid white;
         }
+
+        /*modification de la taille du logo, inversion des couleurs*/
         img{
             @include footer-logo;
         }
 }
 .footer{
+
+    //largeur 1400px déclaré dans fichier base
     &__container{
-        height: auto;
         position: relative;
         padding: 50px 20px 20px 20px;
     }
@@ -26,11 +29,7 @@ footer{
         height: 40px;
         position: absolute;
         top: 0;
-
-        //padding left 0 ne marche pas
-        left: -24%;
-        
-        /*modification de la taille du logo, inversion des couleurs*/
-        
+        left: -120px;
+        //border: 1px solid white;
     }
 }

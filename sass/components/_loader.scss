@@ -3,7 +3,7 @@
     z-index: 998;
     height: 100%;
     width: 100%;
-    animation: loader-fade-out 1s 2s forwards;
+    animation: loader-fade-out 1s 20s forwards;
     @include gradient;
     &__container{
         position: relative;
@@ -18,7 +18,7 @@
         position: absolute;
         left: 50%;
         margin-left: -140px;
-        bottom: 0;
+        bottom: 50px;
     } 
     &::before {
         animation: 1s linear infinite spinner;
@@ -37,7 +37,7 @@
         @include desktop{
             width: 200px;
             height: 200px;
-            
+            bottom: 300px;
         }
     } 
 }
