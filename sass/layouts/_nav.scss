@@ -6,12 +6,11 @@ nav{
     padding: 60px 0;
         h2{
             padding-left: 5%;
-            
         }
     @include desktop{
 
         //largeur de nav en desk
-        flex: 2;
+        flex: 1;
         padding: 0;
         ul{
             display: flex;
@@ -23,7 +22,6 @@ nav{
             //cette propriété indique l'écart qu'on veut entre les éléménts!
             gap: 3%;
         }
-        
     }
 }
 .new::after{

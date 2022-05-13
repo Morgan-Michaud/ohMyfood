@@ -13,13 +13,11 @@
 
     //la flêche de la souris se change en main
     cursor: pointer;
-    
 }
 
 //fond des boutons principaux et coeur
 @mixin gradient{
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    
 }
 
 //inutilisée: version plus claire du gradient
@@ -29,9 +27,6 @@
 
 //label vert "nouveau"
 @mixin nouveau{
-
-    //le mot "nouveau" est présent en html mais hidden
-    display: initial;
     background-color: $color-tertiary;
     color: darken($color-tertiary, 40);
     position: absolute;
@@ -61,36 +56,15 @@
 //animation des plats au chargement de la page. Peut aussi être utilisée pour les <div> entrées plats desserts...
 @mixin dish-anim{
     animation: dish-load $show-dur backwards;
-
-    /*&--1{
-        animation-delay: $show-delay;
-    }
-    &--2{//plat suivant
-        animation-delay: $show-delay * 2;
-    }
-    &--3{//plat suivant
-        animation-delay: $show-delay * 3;
-    }
-    &--4{//plat suivant
-        animation-delay: $show-delay * 4;
-    }*/
-
-    //plus simple à écrire mais il faut toujours iterer les classes en HTML...
-    @for $i from 1 to 4 {
+    
+    //simple à écrire mais il faut toujours iterer les classes en HTML...
+    @for $i from 1 to 5 {
         &--#{$i}{
             animation-delay: $show-delay * $i;
         }
     }
 }
-//animation des hearts de l'index pour que le coeur CORRESPONDANT se remplisse
-@mixin heart-anim {
-    @for $i from 1 to 4 {
-        &--#{$i}{
-            animation: heart 150ms 3 both;
-        }
-    }
-    
-}
+
 //media query pour ordinateurs
 @mixin desktop{ 
     @media screen and (min-width: map-get($breakpoints, medium)) {

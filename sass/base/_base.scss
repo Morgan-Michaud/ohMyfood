@@ -23,20 +23,13 @@ body{
         margin: auto;
     }
 }
-i{
-    position: relative;
-    top: 30%;
-
-    //sinon c'est chaotique...
-    transform: scale(1);
-}
 
 //dimensionnement de ces deux icones sur le site.
 .fa-arrow-left{
-    transform: scale(2);
+    transform: scale(1.5);
 }
 .fa-heart{
-    transform: scale(2.5);
+    transform: scale(2);
 }
 
 

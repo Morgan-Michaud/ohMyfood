@@ -3,11 +3,11 @@
     z-index: 998;
     height: 100%;
     width: 100%;
-    animation: loader-fade-out 1s 20s forwards;
+    animation: loader-fade-out 1s 2s forwards;
     @include gradient;
     &__container{
         position: relative;
-        height: 800px;
+        height: 700px;
         width: 70%;
         margin: auto;
     }

@@ -15,20 +15,20 @@
             
             //nom du quartier, de la ville et location-dot
             p{
-               flex: 2;
-               
-            }
-            i{
-                flex: 1;
-                left: 35%;
-                top: 60%;
-                transform: scale(1.5);
+                //border: $border;
+                margin: auto;
+                font-size: 18px;
+                position: relative;
+                i{
+                    position: absolute;
+                    left: -40px;
+                    top: 0;
+                }
             }
         }
         &__explore{
             padding: 6%;
-            
-                h1, p{
+                h2, p{
                     text-align: center;
                     margin-bottom: -10px;
                     //border: $border;
@@ -36,8 +36,6 @@
                         font-size: 1.2em;
                     }
                 }
-            
-            
         }
    
 }

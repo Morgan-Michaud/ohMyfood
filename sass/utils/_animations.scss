@@ -45,11 +45,11 @@
 //animation du coeur
 @keyframes heart{
     from{
-        transform: rotateY(0);
+        transform: rotateY(0turn);
         opacity: 0;
     }
     to{
-        transform: rotateY(3);
+        transform: rotateY(3turn);
         opacity: 1;
     }
 }

@@ -22,14 +22,13 @@
             <!--ici un spinner-->
             <div class="loader__logo">Ohmyfood</div>
         </div>
-    
     </div>
     
     <!--logo et fleche-->
     <header>
         <div class="header__container">
             <div class="logo">
-                <img src="../../public/images/ohmyfood@2x.svg">
+                <img src="./public/images/ohmyfood@2x.svg" alt="ohmyfood header logo">
             </div>
             <!--logo en background img sur css-->
             <h1 hidden>ohmyfood</h1>
@@ -41,16 +40,17 @@
 
         <div class="main__container main__index__container">
 
-            <section class="tuto">
+            <!--initialement une <section> mais <section> nécessite un titre h...(W3C) -->
+            <div class="tuto">
 
                 <!--localisation de l'utilisateur-->
                 <article class="local">
                     <div class="local__header">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Paris, Belleville</p>
+                        
+                        <p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
                     </div>
                     <div class="local__explore">
-                        <h1>Réservez le menu qui vous convient</h1>
+                        <h2>Réservez le menu qui vous convient</h2>
                         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
                         <!--bouton rose pour rechercher (accueil) ou commander (menus)-->
@@ -99,7 +99,7 @@
                         </a>
                     </div>
                 </article>
-            </section>
+            </div>
 
             <!--titre et 4 cards d'établissements-->
             <nav class="selection">
@@ -108,11 +108,11 @@
 
                 </div>
                 <ul class="selection__list">
-                    <li class="card" id="la_palette_du_gout">
+
+                    <!--Cet établissement est nouveau-->
+                    <li class="card new" id="la_palette_du_gout">
                         <a href="la_palette_du_gout.html">
                             <div class="card__img">
-                                <!--Cet établissement est nouveau-->
-                                <div class="new"></div>
                                 <img src="public/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="wennington">
                             </div>
                             <div class="card__body">
@@ -120,23 +120,23 @@
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <div class="card__body__heart">
-                                    <!--permet apparemment de commander la checkbox-->
-                                    <label for="toggle--1" class="heart trigger--1">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <input id="toggle--1" type="checkbox">
-                                        <i class="fa-solid fa-heart fa-solid--1"></i>
-                                    </label>
-                                </div>
                             </div>
                         </a>
+                        <!--card__body__heart est placé en dehors du lien <a> (règle W3C)-->
+                        <div class="card__body__heart">
+                            <!--permet apparemment de commander la checkbox-->
+                            <label for="toggle--1" class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <input id="toggle--1" type="checkbox">
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </li>
-                    <li class="card" id="la_note_enchantee">
+
+                    <!--Cet établissement est nouveau-->
+                    <li class="card new" id="la_note_enchantee">
                         <a href="la_note_enchantee.html">
                             <div class="card__img">
-
-                                <!--Cet établissement est nouveau-->
-                                <div class="new"></div>
                                 <img src="public/images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="stil">
                             </div>
                             <div class="card__body">
@@ -144,17 +144,19 @@
                                     <h3>La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
-                                <div class="card__body__heart">
-                                    <!--permet apparemment de commander la checkbox-->
-                                    <label for="toggle--2" class="heart">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <input id="toggle--2" type="checkbox" class="trigger--2">
-                                        <i class="fa-solid fa-heart fa-solid--2"></i>
-                                    </label>
-                                </div>
                             </div>
-
                         </a>
+
+                        <!--card__body__heart est placé en dehors du lien <a> (règle W3C)-->
+                        <div class="card__body__heart">
+                                    
+                            <!--permet de commander la checkbox-->
+                            <label for="toggle--2" class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <input id="toggle--2" type="checkbox">
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </li>
                     <li class="card" id="a_la_francaise">
                         <a href="./a_la_francaise.html">
@@ -166,18 +168,20 @@
                                     <h3>A la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
-                                <div class="card__body__heart">
-
-                                    <!--permet apparemment de commander la checkbox-->
-                                    <label for="toggle--3" class="heart trigger--3">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <input id="toggle--3" type="checkbox">
-                                        <i class="fa-solid fa-heart fa-solid--3"></i>
-                                    </label>
-                                </div>
+                            <!--emplacement initial de card__body__heart-->   
                             </div>
-
                         </a>
+
+                        <!--card__body__heart est placé en dehors du lien <a> (règle W3C)-->
+                        <div class="card__body__heart">
+
+                            <!--permet apparemment de commander la checkbox-->
+                            <label for="toggle--3" class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <input id="toggle--3" type="checkbox">
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </li>
                     <li class="card" id="le_delice_des_sens">
                         <a href="le_delice_des_sens.html">
@@ -189,17 +193,19 @@
                                     <h3>Le délice des sens</h3>
                                     <p>Folie-Méricourt</p>
                                 </div>
-                                <div class="card__body__heart">
-                                    <!--permet apparemment de commander la checkbox-->
-                                    <label for="toggle--4" class="heart trigger--4">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <input id="toggle--4" type="checkbox">
-                                        <i class="fa-solid fa-heart fa-solid--4"></i>
-                                    </label>
-                                </div>
                             </div>
-
                         </a>
+
+                        <!--card__body__heart est placé en dehors du lien <a> (règle W3C)-->
+                        <div class="card__body__heart">
+
+                            <!--permet apparemment de commander la checkbox-->
+                            <label for="toggle--4" class="heart">
+                                <i class="fa-regular fa-heart"></i>
+                                <input id="toggle--4" type="checkbox">
+                                <i class="fa-solid fa-heart"></i>
+                            </label>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -210,7 +216,7 @@
     <footer>
         <div class="footer__container">
             <div class="footer__logo">
-                <img src="public/images/ohmyfood.png" />
+                <img src="public/images/ohmyfood.png" alt="ohmyfood footer logo"/>
             </div>
             <ul class="footer__list">
                 <li>

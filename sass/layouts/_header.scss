@@ -1,38 +1,44 @@
 .header{
     &__container{
-    height: 70px;
-    box-shadow: $header-shadow;
-    display: flex;
-    //permet de faire apparaître la box-shadow
-    position: relative;
-    .logo{
-        position: absolute;
-        left: 50%;
-        margin-left: -98px;
-        top: 30%;
-        //border: $border;
-        @include desktop{
-            transform: scale(1.5);
-            top: 35%;
+        height: 70px;
+        box-shadow: $header-shadow;
+        display: flex;
+
+        //permet de faire apparaître la box-shadow
+        position: relative;
+        .logo{
+            position: absolute;
+            left: 50%;
+            margin-left: -98px;
+            top: 30%;
+            
+            @include desktop{
+                transform: scale(1.5);
+                top: 35%;
+            }
         }
-    }
-    @include desktop{
-        height: 100px;
-    }
-    
+        @include desktop{
+            height: 100px;
+        }
     }
 
     //icone flêche
-    &__fleche {
+    &__fleche{
+        a{
+            position: absolute;
+            left: 8%;
+            top: 35%;
 
-        //le padding top en % évolue en même temps que la largeur de l'écran (!!!)
-        padding-top: 10px;
-        padding-left: 8%;
-        @include desktop{
-            padding-top: 20px;
+            //la flèche grossit en desktop
+            @include desktop{
+                top: 40%;
+            }
+            i{
+                @include desktop{
+                    transform: scale(2.5);
+                }
+            }
         }
     }
-    
-    
 }
 
