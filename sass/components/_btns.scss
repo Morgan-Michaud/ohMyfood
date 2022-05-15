@@ -8,7 +8,6 @@
     width: 30px;
     height: 30px;
     position: relative;
-    background: transparent;
     cursor: pointer;
     
     //balise input type checkbox invisible...
@@ -16,13 +15,16 @@
         
         visibility: hidden;
         &:checked + .fa-solid{
-            animation: heart 400ms both;
+            animation: heart 150ms 3 both;
         }
     }
     
     //L'icone de coeur vide reste au dessus du layer du coeur coloré.
     .fa-regular{
+
+        //pour que le contour du coeur vide reste au dessus
         z-index: 1;
+        background: transparent;
     }
     .fa-solid{
         opacity: 0;
@@ -31,7 +33,10 @@
         left: 0px;
         padding-top: 1px;
         @include gradient;
-        
+
+        //pour rester en dessous du coeur vide.
+        z-index: -1;
+
         //permet de mettre un gradient sur l'icone
         background-clip: text;
         -webkit-background-clip: text;
@@ -140,6 +145,9 @@
     height: 330px;
     overflow: hidden;
     position: relative;
+
+    //nécessaire pour afficher le coeur solid ("au dessus" du coeur regular):
+    z-index: 0;
     @include large{
         width: 380px;
     }
@@ -154,13 +162,14 @@
         }
     }
 
-    //texte et coeur
+    //texte
     &__body{
         position: absolute;
         width: 100%;
         display: flex;
         align-items: center;
-        bottom: 10px;
+        bottom: 0;
+        padding-bottom: 10px;
         height: 22%;
         &__txt{
             flex: 6;
@@ -172,16 +181,25 @@
                 margin: auto;
             }
         }
-        &__heart{
 
-            //card__body__heart est placé en dehors du lien a (règle W3C)
+        //card__body__heart est placé en dehors du lien <a> (règle W3C)
+        &__heart{
+            .heart{
+            
             position: absolute;
             right: 10px;
-            bottom: 30px;
-            .heart{
-                
-                border: $border;
+            bottom: 25px;
+            .fa-regular{
+
+                //ça marche pas.
+                z-index: 999;
             }
+            .fa-solid{
+                position: absolute;
+                bottom: 14px;
+                z-index: 0;
+            }
+        }
         }
     }
 }
@@ -195,7 +213,7 @@
     @include dish-anim;
     overflow: hidden;
     &__large{
-        height: 90px;
+        height: auto;
         width: 120%;
         display: flex;
         &:hover > .info{
@@ -210,7 +228,7 @@
             .checkcircle{
             
             //rotation du cercle blanc
-            animation: oneturn 600ms;
+            animation: oneturn 600ms linear;
             }
         
         }
@@ -218,32 +236,38 @@
             width: 78%;
             white-space: nowrap;
             transition: all 600ms;
-            padding-left: 10px;
-            
-            p{
-                margin-top: -20px;
-                font-size: 20px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+            padding: 0px 0px 0px 10px;
+
+            //le texte trop long affiche des ellipsis
+            overflow: hidden;
+            text-overflow: ellipsis;
             h4{
-                margin-top: 15px;
+                margin-top: 12px;
                 font-size: 22px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                
             }
+            p{
+                margin-top: -25px;
+                font-size: 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                
+            }
+            
         }
         .price{
             width: 13%;
             background-color: $color-white;
             padding-left: 3%;
-            
+                                    
             //aligner le prix avec la ligne du bas
-            padding-top: 35px;
+            padding-top: 29px;
             p{
             font-size: 18px;
             transition: all 600ms;
-            //border: $border;
+            
             }
         }
         .checkslide{
@@ -251,10 +275,10 @@
             background-color: $color-tertiary;
             .checkcircle{
                 position: relative;
-                margin: 30px auto ;
+                margin: 30% auto;
                 width: 30px;
                 height: 30px;
-                border-radius: 100rem;
+                border-radius: 50%;
                 background-color: $color-white;
                 transform: rotate(0turn);
                 

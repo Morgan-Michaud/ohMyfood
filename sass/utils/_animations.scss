@@ -1,4 +1,4 @@
-
+﻿
 //animation des plats au chargement dans les pages menu
 @keyframes dish-load{
     0%{
@@ -32,24 +32,14 @@
     }
 }
 
-//apparition du body (inutilisé)
-@keyframes body-fade-in{
-    from{
-        transform: scaleY(0%);
-    }
-    to{
-        transform: scaleY(100%);
-    }
-}
-
 //animation du coeur
 @keyframes heart{
     from{
-        transform: rotateY(0turn);
+        transform: scale(0);
         opacity: 0;
     }
     to{
-        transform: rotateY(3turn);
+        transform: scale(1.8);
         opacity: 1;
     }
 }

@@ -1,14 +1,12 @@
 .menu{
-    &__img img{
+    &__img{
+        overflow: hidden;
+        img{
         width: 100%;
         background-size: 100%;
         object-fit: cover;
         height: 320px;
-
-        //coller le container de l'img au menu_content
-        margin-bottom: -28px;
-        
-    
+        }
     }
     &__content{
         background-color: $color-nav-background;
@@ -51,14 +49,22 @@
             }
     }
     &__dishes{
+        .entrees, .plats, .desserts{
+            margin-bottom: 50px;
+        }
         
         //en desktop comportement des <div> entrées plats desserts.
         @include desktop{
             display: flex;
             flex-wrap: wrap;
+
+            //aligner les plats en haut mais ça marche pas...
+            align-items: flex-start;
             .entrees, .plats, .desserts{
                 min-width: 466px;
                 margin: auto;
+                
+                
             }
         }
         
