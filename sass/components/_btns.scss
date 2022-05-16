@@ -189,15 +189,10 @@
             position: absolute;
             right: 10px;
             bottom: 25px;
-            .fa-regular{
-
-                //ça marche pas.
-                z-index: 999;
-            }
             .fa-solid{
                 position: absolute;
                 bottom: 14px;
-                z-index: 0;
+                z-index: -1;
             }
         }
         }
@@ -213,13 +208,12 @@
     @include dish-anim;
     overflow: hidden;
     &__large{
-        height: auto;
         width: 120%;
         display: flex;
         &:hover > .info{
             
             //54% est une bonne valeur
-            width: 47.5%;
+            width: 49%;
         }
         &:hover > .price p{
             transform: translateX(40%);
@@ -233,10 +227,10 @@
         
         }
         .info{
-            width: 78%;
+            width: 79%;
             white-space: nowrap;
             transition: all 600ms;
-            padding: 0px 0px 0px 10px;
+            padding-left: 10px;
 
             //le texte trop long affiche des ellipsis
             overflow: hidden;
@@ -250,24 +244,25 @@
             }
             p{
                 margin-top: -25px;
+                margin-bottom: 5px;
                 font-size: 20px;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                
             }
             
         }
         .price{
-            width: 13%;
+            width: 14%;
             background-color: $color-white;
-            padding-left: 3%;
-                                    
+                      
+            //cette valeur définit la hauteur MINIMALE du bouton entier.
+            height: 55px;
+                              
             //aligner le prix avec la ligne du bas
-            padding-top: 29px;
+            padding-top: 27px;
             p{
             font-size: 18px;
             transition: all 600ms;
-            
             }
         }
         .checkslide{
@@ -275,7 +270,10 @@
             background-color: $color-tertiary;
             .checkcircle{
                 position: relative;
-                margin: 30% auto;
+
+                //pour une valeur de hauteur de .price de 55px
+                top: 32%;
+                margin: auto;
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
@@ -293,4 +291,13 @@
         }
     }
 }
-    
+
+//un bouton différent des autres avec h4 sur deux lignes
+#nowrap{
+    .price{
+        padding-top: 55px;
+    }
+    .checkcircle{
+        top: 35%;
+    }
+}
