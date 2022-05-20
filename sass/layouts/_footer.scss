@@ -1,26 +1,26 @@
 footer{
     background-color: $color-footer;
-        a{
-            color: $color-white;
-        }
-        i{
-            color: $color-white;
-            width: 20px;
-            text-align: center;
-        }
-        li{
-            margin-bottom: 10px;
-            //border: 1px solid white;
-        }
+    a{
+        color: $color-light;
+    }
+    i{
+        color: $color-light;
+        width: 20px;
+        text-align: center;
+        margin-right: 8px;
+    }
+    li{
+        margin-bottom: 10px;
+    }
 
-        /*modification de la taille du logo, inversion des couleurs*/
-        img{
-            @include footer-logo;
-        }
+    /*modification de la taille du logo, inversion des couleurs*/
+    img{
+        @include footer-logo;
+    }
 }
 .footer{
 
-    //largeur 1400px déclaré dans fichier base
+    //largeur 1400px déclarée dans le fichier base
     &__container{
         position: relative;
         padding: 50px 20px 20px 20px;
@@ -30,6 +30,5 @@ footer{
         position: absolute;
         top: 0;
         left: -120px;
-        //border: 1px solid white;
     }
 }

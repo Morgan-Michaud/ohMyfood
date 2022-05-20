@@ -8,21 +8,16 @@
     width: 90%;
     margin: 25px auto;
     border-radius: 15px;
-    background-color: $color-white;
+    background-color: $color-light;
     box-shadow: $box-shadow;
 
     //la flêche de la souris se change en main
     cursor: pointer;
 }
 
-//fond des boutons principaux et coeur
+//fond des boutons principaux loader et coeur
 @mixin gradient{
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-}
-
-//inutilisée: version plus claire du gradient
-@mixin hover-gradient{
-    color: linear-gradient(to bottom right, lighten-10($color-secondary), lighten-10($color-primary));
 }
 
 //label vert "nouveau"
@@ -37,11 +32,6 @@
     font-size: large;
     font-weight: bold;
     border-radius: 2px;
-}
-
-//pour les icones heart et la flêche du header
-@mixin icon-scale {
-    transform: scale(2);
 }
 
 //signe vert de validation sur un plat
@@ -71,7 +61,7 @@
         @content
     }
 }
-@mixin large {
+@mixin large{
     @media screen and (min-width: map-get($breakpoints, large)) {
         @content
     }

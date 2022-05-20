@@ -12,7 +12,6 @@
     
     //balise input type checkbox invisible...
     input{
-        
         visibility: hidden;
         &:checked + .fa-solid{
             animation: heart 150ms 3 both;
@@ -50,10 +49,9 @@
 
 .btn-pink{
     margin: 70px auto;
-    //border: $border;
     text-align: center;
     
-    //pour élargir le bouton commander des pages menu
+    //élargir le bouton commander des pages menu
     .commander {
         padding-left: 55px;
         padding-right: 55px;
@@ -66,15 +64,12 @@
     white-space: nowrap;
     box-shadow: $box-shadow;
     padding: 20px;
-    color: $color-white;
+    color: $color-light;
     font-size: 20px;
     transition: 300ms;
     &:hover{
         opacity: .7;
-        box-shadow: $box-shadow-darker;
-
-        //éclaircir le bouton mais opacity c'est plus simple...
-        //@include hover-gradient; 
+        box-shadow: $box-shadow-darker; 
         }
     }
    
@@ -86,54 +81,53 @@
 
 .guide{
     &__step{
-         a{
-            @include btn;
-            height: 100px;
-            transition: all 300ms;
-            @include desktop{
-                height: 83px;
-            }
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            background-color: $color-nav-background;
-            margin-bottom: 20px;
-            &:hover{
-                background-color: $color-hover-guide;
-                i{
-                    color: $color-primary;
-                }
-            }
+        @include btn;
+        height: 100px;
+        transition: all 300ms;
+        @include desktop{
+            height: 83px;
         }
-    &__text{
-        padding: 2% 10%;
-        font-size: 14px;
-    }
-
-        //pastille des étapes + numéro d'étape
-    &__number{
-        color: $color-white;
-        font-size: 15px;
-        text-align: center;
-        padding-top: 5px;
-        min-width: 26px;
-        height: 22px;
-
-        //permet d'avoir un arrondi sur toute la hauteur
-        border-radius: 22px;
-        position: relative;
-        left: -12px;
-        background-color: $color-primary;
-    }
-    
-    //icones du tutoriel replacées et agrandies
-    &__icon{
-        position: relative;
-        left: 15px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        background-color: $color-nav-background;
+        margin-bottom: 20px;
+        &:hover{
+            background-color: $color-hover-guide;
             i{
-                transform: scale(1.5)
+                color: $color-primary;
             }
-    }
+            
+        }
+        &__text{
+            padding: 2% 10%;
+            font-size: 14px;
+        }
+
+            //pastille des étapes + numéro d'étape
+        &__number{
+            color: $color-light;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 5px;
+            min-width: 26px;
+            height: 22px;
+
+            //permet d'avoir un arrondi sur toute la hauteur
+            border-radius: 22px;
+            position: relative;
+            left: -12px;
+            background-color: $color-primary;
+        }
+        
+        //icones du tutoriel replacées et agrandies
+        &__icon{
+            position: relative;
+            left: 15px;
+                i{
+                    transform: scale(1.5)
+                }
+        }
     }  
 }
 
@@ -153,7 +147,6 @@
     }
     &__img{
         img{
-            //display: none;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -185,16 +178,15 @@
         //card__body__heart est placé en dehors du lien <a> (règle W3C)
         &__heart{
             .heart{
-            
-            position: absolute;
-            right: 10px;
-            bottom: 25px;
-            .fa-solid{
                 position: absolute;
-                bottom: 14px;
-                z-index: -1;
+                right: 10px;
+                bottom: 25px;
+                .fa-solid{
+                    position: absolute;
+                    bottom: 14px;
+                    z-index: -1;
+                }
             }
-        }
         }
     }
 }
@@ -228,7 +220,6 @@
         }
         .info{
             width: 79%;
-            white-space: nowrap;
             transition: all 600ms;
             padding-left: 10px;
 
@@ -238,31 +229,38 @@
             h4{
                 margin-top: 12px;
                 font-size: 22px;
-                overflow: hidden;
-                text-overflow: ellipsis;
+
+                //décommenter ces règles pour que h4 soit coupé par des ellipsis
+                //overflow: hidden;
+                //text-overflow: ellipsis;
                 
             }
             p{
                 margin-top: -25px;
                 margin-bottom: 5px;
                 font-size: 20px;
+
+                //déplacer cette règle dans .info pour que h4 siot coupé par des ellipsis
+                white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            
         }
         .price{
             width: 14%;
-            background-color: $color-white;
-                      
+            background-color: $color-light;
+            position: relative; 
+
             //cette valeur définit la hauteur MINIMALE du bouton entier.
             height: 55px;
-                              
+                        
             //aligner le prix avec la ligne du bas
             padding-top: 27px;
             p{
-            font-size: 18px;
-            transition: all 600ms;
+                margin-left: 5px;
+                font-weight: bold;
+                font-size: 18px;
+                transition: all 600ms;
             }
         }
         .checkslide{
@@ -272,12 +270,13 @@
                 position: relative;
 
                 //pour une valeur de hauteur de .price de 55px
-                top: 32%;
+                top: 50%;
                 margin: auto;
+                margin-top: -15px;
                 width: 30px;
                 height: 30px;
                 border-radius: 50%;
-                background-color: $color-white;
+                background-color: $color-light;
                 transform: rotate(0turn);
                 
                 //le signe check est une border right et bottom
@@ -293,11 +292,8 @@
 }
 
 //un bouton différent des autres avec h4 sur deux lignes
-#nowrap{
+.nowrap{
     .price{
         padding-top: 55px;
-    }
-    .checkcircle{
-        top: 35%;
     }
 }

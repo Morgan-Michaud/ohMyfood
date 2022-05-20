@@ -1,24 +1,26 @@
 h1{
     font-size: 30px;
 }
+p{
+    font-size: 1.5em;
+}
 h1, h2, h3, h4, p, div, a{
     font-family: 'roboto', sans-serif;
 }
 
-a{/*tous les liens sont en noir et pas soulignés*/
+/*tous les liens sont en noir et pas soulignés*/
+a{
     text-decoration: none;
     color: black;
 }
 
-ul{/*pas de puces sur les listes*/
+/*pas de puces ni de retrait sur les listes*/
+ul{
     list-style-type: none;
-
-    /*elimine le retrait des listes*/
     padding-left: 0;
 }
+
+//Class pour conserver des accents même en majuscule
 .uppercase{
     text-transform: uppercase;
-}
-p{
-    font-size: 1.5em;
 }

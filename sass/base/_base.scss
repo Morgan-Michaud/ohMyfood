@@ -4,20 +4,14 @@ body{
 
     //...pour positionner un loader...
     position: relative;
-    
-    //masquer le body au chargement: attention on ne voit plus le chargement des plats sur la page menu...
-    //transform: scaleY(0);
-    //animation: body-fade-in 0s 3s forwards;
 }
 .main__index__container{
     @include desktop{
 
         //pour afficher section tuto et nav en ligne
         display: flex;
-        
     }
 }
-
 .main, .footer, .header{
     &__container{
         max-width: 1400px;

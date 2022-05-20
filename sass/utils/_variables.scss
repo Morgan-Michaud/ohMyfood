@@ -4,7 +4,7 @@ $color-tertiary: #99e2D0;
 $color-footer: #000000;
 $color-nav-background: #f8f8f8;
 $color-nav-darker: #e6e6e6;
-$color-white: white;
+$color-light: white;
 $color-shadow: #e7e6e6;
 $color-header-shadow:rgb(117, 117, 117);
 $color-hover-guide: rgb(248, 233, 252);
@@ -19,9 +19,9 @@ $header-shadow: 0px 8px 5px -5px $color-header-shadow;
 $menu-border-radius: 50px 50px 0 0;
 $border: solid 1px black;
 
-//durée de l'apparition des plats
+//durée de l'apparition d'un premier dish
 $show-dur: 700ms;
-//retard des plats suivants
+//retard des dishs suivants
 $show-delay: 300ms;
 
 //une map avec les breakpoints pour faire des mixins media queries

@@ -1,45 +1,48 @@
 .tuto{
     @include desktop{
 
-        //largeur du tuto en desk
-        width: 400px;
+        //largeur du tuto en tablette
+        width: 350px;
         height: auto;
+    }
+    @include large{
+
+        //largeur du tuto en desktop
+        width: 400px;
     }
 }
 .local{
     background-color: $color-nav-background;
-        &__header{
-            background-color: $color-nav-darker;
-            display: flex;
-            height: 70px;
-            
-            //nom du quartier, de la ville et location-dot
-            p{
-                //border: $border;
-                margin: auto;
-                font-size: 18px;
-                position: relative;
-                i{
-                    position: absolute;
-                    left: -40px;
-                    top: 0;
-                }
+    &__header{
+        background-color: $color-nav-darker;
+        display: flex;
+        height: 70px;
+        
+        //nom du quartier, de la ville et location-dot
+        p{
+            margin: auto;
+            font-size: 18px;
+            position: relative;
+            i{
+                position: absolute;
+                left: -40px;
+                top: 0;
             }
         }
-        &__explore{
-            padding: 6%;
-                h2, p{
-                    text-align: center;
-                    margin-bottom: -10px;
-                    //border: $border;
-                    @include desktop{
-                        font-size: 1.2em;
-                    }
-                }
+    }
+    &__explore{
+        padding: 6%;
+        h2, p{
+            text-align: center;
+            margin-bottom: -10px;
+            //border: $border;
+            @include desktop{
+                font-size: 1.2em;
+            }
         }
+    }
    
 }
-
 .guide{
     padding: 8% 0;
     padding-bottom: 70px;
