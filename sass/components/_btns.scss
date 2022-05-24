@@ -237,10 +237,10 @@
             }
             p{
                 margin-top: -25px;
-                margin-bottom: 5px;
+                margin-bottom: 12px;
                 font-size: 20px;
 
-                //déplacer cette règle dans .info pour que h4 siot coupé par des ellipsis
+                //déplacer cette règle dans .info pour que h4 soit coupé par des ellipsis
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -252,11 +252,10 @@
             position: relative; 
 
             //cette valeur définit la hauteur MINIMALE du bouton entier.
-            height: 55px;
-                        
-            //aligner le prix avec la ligne du bas
-            padding-top: 27px;
+            height: auto;
             p{
+                position: absolute;
+                bottom: -6px;
                 margin-left: 5px;
                 font-weight: bold;
                 font-size: 18px;
