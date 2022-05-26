@@ -15,14 +15,6 @@
         z-index: 1;
         margin-top: -70px;
         padding-bottom: 100px;
-        h3{
-            text-transform: uppercase;
-            width: 50px;
-            border-bottom: solid 3px $color-tertiary;
-            padding-bottom: 8px;
-            font-size: 18px;
-            margin-left: 5%;
-        }
     }
     &__header{
             display: flex;
@@ -33,7 +25,7 @@
             //nom de l'établissement
             h2{
                 font-family: 'Shrikhand';
-                font-size: 32px;
+                font-size: 30px;
                 
             }
             .heart{
@@ -41,7 +33,6 @@
                 //repousser le coeur rose
                 margin-left: auto;
                 input{
-                    
                     position: absolute;
                     left: 7px;
                     top: 8px;
@@ -66,4 +57,16 @@
             }
         }
     }    
+}
+.list--1::before{
+    content: "entrées";
+    @include tertiary-underline;
+}
+.list--2::before{
+    content: "plats";
+    @include tertiary-underline;
+}
+.list--3::before{
+    content: "desserts";
+    @include tertiary-underline;
 }

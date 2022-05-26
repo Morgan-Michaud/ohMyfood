@@ -66,3 +66,13 @@
         @content
     }
 }
+@mixin tertiary-underline {
+    display: block;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-bottom: -10px;
+    width: 45px;
+    border-bottom: solid 3px $color-tertiary;
+}
